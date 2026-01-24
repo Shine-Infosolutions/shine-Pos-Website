@@ -889,3 +889,14 @@ img[src="assets/img/user6.png"] {
   background: transparent !important;
   mix-blend-mode: multiply;
 }
+/* Remove shadow from user6.png image */
+img[src="assets/img/user6.png"] {
+  box-shadow: none !important;
+  filter: none !important;
+}
+/* Remove hero section background and shadow */
+.hero-image img {
+  filter: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
