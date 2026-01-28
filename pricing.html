@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,16 @@
   <link rel="stylesheet" href="pricing.css">
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="home-v2.html">
-        <img src="assets/img/logo.png" alt="Shine Pos">
-        <span class="ms-2 fw-bold">Shine Pos</span>
-      </a>
+      <a class="navbar-brand" href="home-v2.html"><img src="assets/img/logo.png" alt="Shine Pos">ShinePos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,9 +52,10 @@
       <div class="row g-4 justify-content-center">
         <div class="col-lg-4">
           <div class="pricing-card text-center">
-            <h3>Starter</h3>
+            <h3>Trial</h3>
             <p class="text-muted">Perfect for small businesses</p>
-            <div class="price">$29<small class="fs-6 text-muted">/month</small></div>
+            <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i>Free<small class="fs-6 text-muted">/14
+                Days</small></div>
             <ul class="list-unstyled my-4">
               <li class="mb-2">✓ Single location</li>
               <li class="mb-2">✓ Up to 100 products</li>
@@ -72,9 +74,10 @@
             <div class="badge bg-primary position-absolute top-0 start-50 translate-middle px-3 py-2">Most Popular</div>
             <h3>Professional</h3>
             <p class="text-muted">Best for growing businesses</p>
-            <div class="price">$79<small class="fs-6 text-muted">/month</small></div>
+            <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i>1499<small class="fs-6 text-muted">/1
+                month</small></div>
             <ul class="list-unstyled my-4">
-              <li class="mb-2">✓ Up to 5 locations</li>
+              <li class="mb-2">✓ Up to 1 locations</li>
               <li class="mb-2">✓ Unlimited products</li>
               <li class="mb-2">✓ Advanced reporting</li>
               <li class="mb-2">✓ Priority support</li>
@@ -90,9 +93,10 @@
           <div class="pricing-card text-center">
             <h3>Enterprise</h3>
             <p class="text-muted">For large organizations</p>
-            <div class="price">$199<small class="fs-6 text-muted">/month</small></div>
+            <div class="price"><i class="fa-solid fa-indian-rupee-sign"></i>7299<small class="fs-6 text-muted">/per
+                month</small></div>
             <ul class="list-unstyled my-4">
-              <li class="mb-2">✓ Unlimited locations</li>
+              <li class="mb-2">✓ Up to 5 locations</li>
               <li class="mb-2">✓ Unlimited products</li>
               <li class="mb-2">✓ Custom reporting</li>
               <li class="mb-2">✓ 24/7 phone support</li>
@@ -117,7 +121,7 @@
           <thead>
             <tr>
               <th>Features</th>
-              <th class="text-center">Starter</th>
+              <th class="text-center">Trail</th>
               <th class="text-center">Professional</th>
               <th class="text-center">Enterprise</th>
             </tr>
@@ -126,8 +130,8 @@
             <tr>
               <td><strong>Number of Locations</strong></td>
               <td class="text-center">1</td>
+              <td class="text-center">Up to 1</td>
               <td class="text-center">Up to 5</td>
-              <td class="text-center">Unlimited</td>
             </tr>
             <tr>
               <td><strong>Product Catalog</strong></td>
@@ -198,13 +202,15 @@
               </h2>
               <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#pricingFAQ">
                 <div class="accordion-body">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.
+                  Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next
+                  billing cycle.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2">
                   Is there a setup fee?
                 </button>
               </h2>
@@ -216,7 +222,8 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq3">
                   Do you offer a free trial?
                 </button>
               </h2>
@@ -228,7 +235,8 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq4">
                   What payment methods do you accept?
                 </button>
               </h2>
@@ -244,65 +252,85 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="section bg-light">
-    <div class="container text-center">
-      <h2>Ready to Get Started?</h2>
-      <p class="lead">Start your free trial today and see how Shine Pos can transform your business.</p>
-      <div class="d-flex gap-3 justify-content-center">
-        <a href="pricing.html" class="btn btn-primary btn-lg">Start Free Trial</a>
-        <a href="contact.html" class="btn btn-outline-primary btn-lg">Contact Sales</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <h6>Shine Pos</h6>
-          <p>Transform your business operations with our cutting-edge POS solution designed for modern businesses.</p>
-          <hr class="my-3">
-          <h6>Shine Infosolution</h6>
-          <p class="mb-1">Best Digital Marketing and Software Company</p>
-          <p class="mb-1">Email: info@shineinfosolutions.in</p>
-          <p class="mb-0">Phone: (+91)9140427414 | (+91)919235067667</p>
-        </div>
-        <div class="col-lg-2">
-          <h6>Product</h6>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white-50">Features</a></li>
-            <li><a href="#" class="text-white-50">Pricing</a></li>
-            <li><a href="#" class="text-white-50">Security</a></li>
-            <li><a href="#" class="text-white-50">Updates</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2">
-          <h6>Support</h6>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white-50">Help Center</a></li>
-            <li><a href="#" class="text-white-50">Contact</a></li>
-            <li><a href="#" class="text-white-50">Status</a></li>
-            <li><a href="#" class="text-white-50">Community</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4">
-          <h6>Stay Updated</h6>
-          <p class="text-white-50">Get the latest updates and offers.</p>
-          <div class="input-group">
-            <input type="email" class="form-control" placeholder="Enter your email">
-            <a href="contact.html" class="btn btn-primary">Subscribe</a>
+  <footer class="footer bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      
+      <div class="col-lg-4 col-md-6">
+        <h4 class="fw-bold mb-1 text-white">ShinePOS</h4>
+        <p class="text-danger small fw-bold mb-3">By Shine Infosolution</p>
+        
+        <p class="text-white-50 small mb-4">
+          Best Digital Marketing and Software Company. We provide cutting-edge POS solutions and digital services to help your business grow.
+        </p>
+
+        <div class="contact-details">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-envelope-fill text-primary me-2"></i>
+            <span class="text-white-50 small">info@shineinfosolutions.in</span>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-telephone-fill text-primary me-2"></i>
+            <span class="text-white-50 small">(+91) 9140427414</span>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-telephone-fill text-primary me-2"></i>
+            <span class="text-white-50 small">(+91) 9235067667</span>
           </div>
         </div>
       </div>
-      <hr class="my-4">
-      <div class="text-center text-white-50">
-        <p>&copy; 2025 Shine Pos. All rights reserved. Design by AwesomeThemez</p>
+
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6 class="fw-bold mb-3 border-bottom border-danger pb-2 d-inline-block">Product</h6>
+        <ul class="list-unstyled mt-2">
+          <li class="mb-2"><a href="features.html" class="text-white-50 text-decoration-none small hover-link">Features</a></li>
+          <li class="mb-2"><a href="pricing.html" class="text-white-50 text-decoration-none small hover-link">Pricing</a></li>
+          <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none small hover-link">Services</a></li>
+          <li><a href="gallery.html" class="text-white-50 text-decoration-none small hover-link">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6 class="fw-bold mb-3 border-bottom border-danger pb-2 d-inline-block">Support</h6>
+        <ul class="list-unstyled mt-2">
+          <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none small hover-link">Blog</a></li>
+          <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none small hover-link">Contact</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none small hover-link">Help Center</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none small hover-link">Community</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h6 class="fw-bold mb-3 border-bottom border-danger pb-2 d-inline-block">Newsletter</h6>
+        <p class="text-white-50 small">Subscribe for the latest software updates.</p>
+        <div class="input-group mb-3">
+          <button class="btn btn-primary btn-sm" type="button">Subscribe</button>
+        </div>
+        <div class="d-flex gap-3 mt-4">
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white-50 fs-5"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4 border-secondary opacity-25">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="text-white-50 small mb-0">
+          &copy; 2026 <strong>Shine POS</strong>. All rights reserved. 
+          <span class="d-none d-md-inline mx-2">|</span> 
+          Developed by <a href="#" class="text-primary text-decoration-none">Shine Infosolution</a>
+        </p>
       </div>
     </div>
-  </footer>
-
+  </div>
+</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scroll-effects.js"></script>
 </body>
+
 </html>

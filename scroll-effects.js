@@ -120,5 +120,7 @@ function addScrollEffects() {
   });
 }
 
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 // Call the function to add effects
 addScrollEffects();

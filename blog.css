@@ -22,6 +22,11 @@ body {
   padding: 1rem 0;
 }
 
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+}
 .navbar-brand img { height: 45px; }
 
 .nav-link {
@@ -130,6 +135,6 @@ body {
 
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.5rem; }
-  .section { padding: 4rem 0; }
+  .section { padding: 4rem 0; margin-top: 3.1rem;}
   .blog-content { padding: 1.5rem; }
 }
