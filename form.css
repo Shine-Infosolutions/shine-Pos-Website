@@ -80,7 +80,7 @@ textarea {
     background-color: #b71c1c;
 } */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .form-row {
         flex-direction: column;
         gap: 20px;

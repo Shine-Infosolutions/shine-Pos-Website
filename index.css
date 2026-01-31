@@ -288,3 +288,23 @@ body {
   .feature-card { padding: 2rem; }
   .pricing-card { padding: 2rem; }
 }
+
+
+/* .lead p {
+    font-size: 1.25rem;
+    
+    color: #64748b;
+} */
+
+/* .lead {
+    font-size: 1.25rem;
+    font-weight: 0;
+    
+} */
+
+.col-lg-6 p{
+  font-size: 1.25rem;
+    font-weight: 300;
+    color: #64748b;
+    margin-bottom: 20px;
+}
