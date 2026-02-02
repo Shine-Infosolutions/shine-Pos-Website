@@ -16,7 +16,68 @@
   .text-start {
     text-align: center !important;
     color: rgb(92, 91, 91);
-}
+  }
+  
+  /* Mobile menu toggle styles */
+  .navbar-toggler {
+    border: none !important;
+    padding: 14px 10px;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+  
+  .navbar-toggler:hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 4px;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: none !important;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+  }
+  
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    left: 0;
+  }
+  
+  .navbar-toggler-icon::before {
+    top: -7px;
+  }
+  
+  .navbar-toggler-icon::after {
+    top: 7px;
+  }
+  
+  /* Cross animation when menu is open */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent !important;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
 </style>
 <body>
   <!-- <div class="container"> -->
@@ -178,7 +239,7 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="section" id="testimonials">
+   <section class="section" id="testimonials">
     <div class="container">
       <h2 class="section-title">What Our Customers Say</h2>
       <p class="section-subtitle">Join thousands of satisfied businesses worldwide</p>
@@ -243,7 +304,7 @@
           <p class="lead">With over 10 years of experience in the POS industry, Shine POS has become the trusted choice
             for businesses worldwide. Our innovative solutions have helped thousands of businesses streamline their
             operations and increase profitability.</p>
-             <p>
+        <p>   
     Shine POS is built to support businesses of all sizes by offering a fast, secure, and user-friendly
     platform. Our system simplifies sales, inventory, and customer management while providing
     real-time reports to help you make smarter business decisions. With reliable performance and
@@ -564,6 +625,40 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="scroll-effects.js"></script>
+  
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close menu when clicking on nav links (mobile)
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 992) { // Only on mobile
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+            });
+            bsCollapse.hide();
+          }
+        });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInsideNav = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+        const isNavOpen = navbarCollapse.classList.contains('show');
+        
+        if (!isClickInsideNav && isNavOpen && window.innerWidth < 992) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+          });
+          bsCollapse.hide();
+        }
+      });
+    });
+  </script>
   <!-- </div> -->
 </body>
 

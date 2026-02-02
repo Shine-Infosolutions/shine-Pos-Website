@@ -11,6 +11,68 @@
   <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="responsive.css">
 </head>
+<style>
+  /* Mobile menu toggle styles */
+  .navbar-toggler {
+    border: none !important;
+    padding: 14px 10px;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+  }
+  
+  .navbar-toggler:hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 4px;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: none !important;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+  }
+  
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    left: 0;
+  }
+  
+  .navbar-toggler-icon::before {
+    top: -7px;
+  }
+  
+  .navbar-toggler-icon::after {
+    top: 7px;
+  }
+  
+  /* Cross animation when menu is open */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent !important;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+</style>
 
 <body>
   <!-- Navigation -->
@@ -59,6 +121,63 @@
           <img src="assets/img/contact_left.png" alt="Contact" class="img-fluid">
         </div>
         <div class="col-lg-6">
+  <div class="contact-card">
+    <h2 class="mb-4">Send us a Message</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      
+      <!-- Web3Forms Access Key -->
+      <input type="hidden" name="access_key" value="666878ad-53fc-403c-bbec-a8d80e54af90">
+
+      <!-- Optional: Redirect after submit -->
+      <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> -->
+
+      <!-- Optional: Email Subject -->
+      <input type="hidden" name="subject" value="Shine Pos">
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+        </div>
+      </div>
+
+       <div class="mb-3">
+        <select name="subject_type" class="form-control" required>
+          <option value="">Select Subject</option>
+          <option value="Sales Inquiry">Sales Inquiry</option>
+          <option value="Technical Support">Technical Support</option>
+          <option value="Request Demo">Request Demo</option>
+          <option value="Other">Other</option>
+        </select>
+      </div> 
+
+      <div class="mb-3">
+        <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="d-none">
+
+      <button type="submit" class="btn btn-primary btn-lg w-100">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+        <!-- <div class="col-lg-6">
           <div class="contact-card">
             <h2 class="mb-4">Send us a Message</h2>
             <form>
@@ -84,7 +203,7 @@
                   <option value="sales">Sales Inquiry</option>
                   <option value="support">Technical Support</option>
                   <option value="demo">Request Demo</option>
-                  <!-- <option value="partnership">Partnership</option> -->
+                  
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -94,7 +213,7 @@
               <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
             </form>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -263,6 +382,40 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="scroll-effects.js"></script>
+  
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close menu when clicking on nav links (mobile)
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 992) { // Only on mobile
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false
+            });
+            bsCollapse.hide();
+          }
+        });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInsideNav = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+        const isNavOpen = navbarCollapse.classList.contains('show');
+        
+        if (!isClickInsideNav && isNavOpen && window.innerWidth < 992) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+          });
+          bsCollapse.hide();
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
